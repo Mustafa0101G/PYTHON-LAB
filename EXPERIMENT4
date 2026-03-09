@@ -1,0 +1,30 @@
+# Initialize the main list
+rel_football = [
+    "team", "players", "sports", "match", "football club", 
+    "group", "state", "nation", "dream team", 
+    "team of the century", "entity", "committee", 
+    "members", "supporters"
+]
+
+print("Main list:", rel_football)
+
+# 1. Append: Adds an item to the end of the list
+rel_football.append("coach")
+print("\nAfter append:", rel_football)
+
+# 2. Insert: Adds an item at a specific position (index 2)
+rel_football.insert(2, "referee")
+print("\nAfter insert:", rel_football)
+
+# 3. Remove: Searches for and removes a specific item
+# Note: Ensure the string matches exactly (case-sensitive)
+rel_football.remove("group")
+print("\nAfter remove:", rel_football)
+
+# 4. Copy: Creates a shallow copy of the list
+new_list = rel_football.copy()
+print("\nAfter copy:", new_list)
+
+# 5. Clear: Removes all items from the list
+rel_football.clear()
+print("\nAfter clear:", rel_football)

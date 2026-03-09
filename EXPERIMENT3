@@ -1,0 +1,34 @@
+# Input collection
+book = input("Enter a book title: ")
+author = input("Enter author name: ")
+
+# 1. Get the length of the string
+print("1. Length of book title:", len(book))
+
+# 2. Convert to Upper Case
+print("2. Upper case:", book.upper())
+
+# 3. Convert to Lower Case
+print("3. Lower case:", book.lower())
+
+# 4. Convert to Title Case (Each word starts with a capital)
+print("4. Title case:", book.title())
+
+# 5. Capitalize (Only the first letter of the string)
+print("5. Capitalize:", book.capitalize())
+
+# 6. Removing whitespace (Strip)
+messy = "   " + book + "   "
+print("6. Strip space:", messy.strip())
+
+# 7. Replacing characters (Replace space with hyphen)
+print("7. Replace space:", book.replace(" ", "-"))
+
+# 8. Count occurrences of a character
+print("8. Count of letter 'a':", book.count("a"))
+
+# 9. Find first position of a character
+print("9. First position of 'o':", book.find("o"))
+
+# 10. Find last position of a character (Right find)
+print("10. Last position of 'o':", book.rfind("o"))

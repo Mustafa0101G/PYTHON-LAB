@@ -1,0 +1,52 @@
+# List of players
+players = ["Mustafa", "Mazen", "Osman"]
+data = {}
+
+# Looping statement to collect data
+for p in players:
+    print(f"\nEnter status of {p}:")
+    goals = int(input(f"{p} - goals scored: "))
+    games = int(input(f"{p} - games played: "))
+    
+    # Calculate average (handling division by zero just in case)
+    avg = goals / games if games > 0 else 0
+    data[p] = avg
+
+# Assigning averages to variables for comparison
+mustafa = data["Mustafa"]
+mazen = data["Mazen"]
+osman = data["Osman"]
+
+# Control flow statements to find the rank (First, Second, Third)
+if mustafa >= mazen and mustafa >= osman:
+    first = "Mustafa"
+    if mazen >= osman:
+        second = "Mazen"
+        third = "Osman"
+    else:
+        second = "Osman"
+        third = "Mazen"
+
+elif mazen >= mustafa and mazen >= osman:
+    first = "Mazen"
+    if mustafa >= osman:
+        second = "Mustafa"
+        third = "Osman"
+    else:
+        second = "Osman"
+        third = "Mustafa"
+
+else:
+    first = "Osman"
+    if mustafa >= mazen:
+        second = "Mustafa"
+        third = "Mazen"
+    else:
+        second = "Mazen"
+        third = "Mustafa"
+
+
+print("\nThe rank of them is:")
+print(f"First player is: {first}")
+print(f"Second player is: {second}")
+print(f"Third player is: {third}")

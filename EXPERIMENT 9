@@ -1,0 +1,20 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.DataFrame({
+    "team": ["CSK", "MI", "RCB", "KKR"],
+    "Runs": [195, 150, 200, 170]
+})
+
+print(df)
+plt.bar(df["team"], df["Runs"])
+plt.xlabel("Team")
+plt.ylabel("Runs")
+plt.title("IPL Team Runs")
+plt.show()
+
+############################################## output###################################
+team  Runs
+0  CSK   195
+1   MI   150
+2  RCB   200
+3  KKR   170

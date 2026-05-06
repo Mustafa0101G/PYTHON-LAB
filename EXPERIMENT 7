@@ -1,0 +1,20 @@
+class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+    def bark(self):
+        print(f"{self.name} says: woof! woof!")
+    def info(self):
+        print(f"I am {self.name}, a proud {self.breed}.")
+dog1 = Dog("Buddy", "Golden Retriever")
+dog2 = Dog("Rocky", "Bulldog")
+dog1.info()
+dog1.bark()
+dog2.info()
+dog2.bark()
+
+################################## output #############################
+I am Buddy, a proud Golden Retriever.
+Buddy says: woof! woof!
+I am Rocky, a proud Bulldog.
+Rocky says: woof! woof!

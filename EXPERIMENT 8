@@ -1,0 +1,30 @@
+import re
+
+text = "python is amazing. python 3.10 is powerful"
+match_result = re.match(r"python", text)
+print("match:", match_result.group() if match_result else None)
+# 2. re.findall: Returns a list containing all matches
+findall_result = re.findall(r"python", text)
+print("findall:", findall_result)
+for match in re.finditer(r"python", text):
+    print("finditer:", match.group(), "at position", match.start())
+split_result = re.split(r"\s", text) # Splits by whitespace
+print("split:", split_result)
+sub_result = re.sub(r"python", "Java", text)
+print("sub:", sub_result)
+fullmatch_result = re.fullmatch(r"python is amazing. python 3.10 is powerful", text)
+print("fullmatch:", "matched" if fullmatch_result else "not matched")
+pattern = re.compile(r"python")
+compiled_result = pattern.findall(text)
+escaped_result = re.escape("python 3.10?")
+print(f"escape: {escaped_result}")
+
+################################################## output #########################################
+match: python
+findall: ['python', 'python']
+finditer: python at position 0
+finditer: python at position 19
+split: ['python', 'is', 'amazing.', 'python', '3.10', 'is', 'powerful']
+sub: Java is amazing. Java 3.10 is powerful
+fullmatch: matched
+escape: python\ 3\.10\?

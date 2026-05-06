@@ -1,0 +1,26 @@
+car = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+}
+
+print(f"original Dictionary: {car}")
+
+print(f"Brand name: {car['brand']}")
+
+car["year"] = 2023
+
+price = car.get("price", "not listed")
+print(f"price: {price}")
+
+car.pop("model")
+
+print(f"keys: {list(car.keys())}")
+print(f"values: {list(car.values())}")
+
+################################# OUTPUT###############################
+original Dictionary: {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+Brand name: Ford
+price: not listed
+keys: ['brand', 'year']
+values: ['Ford', 2023]

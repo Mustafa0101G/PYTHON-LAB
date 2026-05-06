@@ -1,0 +1,31 @@
+import pandas as pd
+df = pd.read_csv('data.csv')
+print("First 5 Rows")
+print(df.head())
+print("\nData information (types & nulls)")
+print(df.info())
+print("\nBasic statistics")
+print(df.describe())
+df.drop_duplicates(inplace=True)
+df['score'] = df['score'].fillna(df['score'].mean())
+df.dropna(subset=['student_name'], inplace=True)
+print("\nCleaned data shape")
+print(df.shape)
+
+
+####################################### output ##############################3
+RangeIndex: 5 entries, 0 to 4
+Data columns (total 3 columns):
+ #   Column        Non-Null Count  Dtype  
+---  ------        --------------  -----  
+ 0   student_name  4 non-null      object 
+ 1   score         4 non-null      float64
+ 2   age           5 non-null      int64
+
+score        age
+count   4.000000   5.000000
+mean   85.000000  20.400000
+std     5.715476   1.140175
+min    78.000000  19.000000
+...
+max    92.000000  22.000000
